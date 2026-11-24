@@ -1,0 +1,12 @@
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-2); }
+.card {
+  width: 100%; text-align: start; background: var(--curb); border: 0; border-radius: var(--r);
+  padding: var(--sp-3) var(--sp-4); display: grid; gap: 2px; cursor: pointer; min-height: 64px;
+  transition: transform 120ms var(--ease-out);
+}
+.card:active { transform: scale(0.98); }
+.name { font-family: var(--font-ui); font-weight: 500; font-size: 17px; }
+.meta { color: var(--dust); font-size: var(--fs-xs); }
+.flag { color: var(--warn); font-size: var(--fs-xs); }
+.empty { margin: auto 0; display: grid; gap: var(--sp-2); text-align: center; }
+.emptyTitle { font-family: var(--font-ui); font-weight: 500; font-size: var(--fs-m); }

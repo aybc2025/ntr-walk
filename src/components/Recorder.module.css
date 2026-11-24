@@ -1,0 +1,27 @@
+.wrap { height: 100%; display: flex; flex-direction: column; padding-bottom: env(safe-area-inset-bottom); }
+.stage { position: relative; flex: 1; min-height: 0; background: #000; overflow: hidden; }
+.video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hud { position: absolute; top: var(--sp-3); inset-inline: var(--sp-3); display: flex; justify-content: space-between; gap: var(--sp-2); }
+.shade { background: var(--shade); box-shadow: none; color: #fff; font-size: 14px; padding: 5px 12px; }
+.blink { animation: blink 1.2s steps(2, jump-none) infinite; }
+@keyframes blink { 50% { opacity: 0.25; } }
+.notice {
+  position: absolute; bottom: var(--sp-3); inset-inline: var(--sp-3); background: var(--chalk); color: var(--asphalt);
+  border-radius: var(--r); padding: var(--sp-3) var(--sp-4); display: flex; justify-content: space-between; align-items: center;
+  gap: var(--sp-3); font-family: var(--font-ui); font-weight: 500; font-size: 15px;
+}
+.ok { border: 0; background: transparent; color: #1F5FA8; font-weight: 700; min-height: 44px; min-width: 44px; cursor: pointer; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; padding: var(--sp-3) var(--sp-4); }
+.stats div { display: grid; justify-items: center; }
+.stats dt { order: 2; color: var(--dust); font-size: 12px; }
+.stats dd { margin: 0; font-family: var(--font-ui); font-weight: 500; font-size: 18px; }
+.controls { display: grid; grid-template-columns: 1fr 2fr; gap: var(--sp-2); padding: 0 var(--sp-3) var(--sp-3); }
+.hold { position: relative; overflow: hidden; -webkit-user-select: none; user-select: none; touch-action: none; }
+.fill {
+  position: absolute; inset: 0; background: rgba(255, 255, 255, 0.28); transform: scaleX(0); transform-origin: left center;
+  transition: transform 200ms var(--ease-out);
+}
+.holding .fill { transform: scaleX(1); transition: transform var(--hold-ms) linear; }
+.holdLabel { position: relative; }
+.holdLabel small { font-weight: 500; opacity: 0.85; font-size: var(--fs-xs); }
+@media (prefers-reduced-motion: reduce) { .blink { animation: none; } }

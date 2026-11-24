@@ -1,0 +1,25 @@
+/* Declared visual system (approved in the spec). Every value in the app traces back here. */
+:root {
+  --asphalt: #1E2227;   /* background */
+  --curb: #2C3238;      /* surfaces */
+  --edge: #454D55;      /* lines, borders */
+  --chalk: #F2F1EC;     /* primary text: 14:1 on asphalt */
+  --dust: #A9B0B7;      /* secondary text: 7.6:1 on asphalt */
+  --line: #F5C518;      /* primary action (centre-line yellow): asphalt text on it 10:1 */
+  --rec: #E5484D;       /* recording / stop: UI and large text only on asphalt; white bold text on it */
+  --go: #3FB27F;        /* GPS good: 6:1 on asphalt */
+  --warn: #F08A24;      /* GPS weak, warnings: icon/border use */
+  --shade: rgba(20, 22, 25, 0.78); /* pills over the camera */
+
+  --font-ui: 'Rubik', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Heebo', 'Segoe UI', system-ui, sans-serif;
+  --fs-xs: 13px; --fs-s: 16px; --fs-m: 20px; --fs-l: 25px; --fs-xl: 31px; --fs-xxl: 39px;
+
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px; --sp-7: 48px;
+  --r: 10px; --r-pill: 999px;
+  --tap: 52px;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --hold-ms: 1000ms;
+  color-scheme: dark;
+}
